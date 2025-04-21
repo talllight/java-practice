@@ -1,25 +1,14 @@
 import java.util.Scanner;
-
-public class GradeCalculator {
+class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.print("점수를 입력하세요: ");
-        int score = scanner.nextInt();
-        String grade;
+        int num = sc.nextInt();
 
-        if (score >= 90) {
-            grade = "A";
-        } else if (score >= 80) {
-            grade = "B";
-        } else if (score >= 70) {
-            grade = "C";
-        } else if (score >= 60) {
-            grade = "D";
+        if (1 <= num && num <= 100) {
+            System.out.println("1에서 100 사이의 값입니다.");
         } else {
-            grade = "F";
+            System.out.println("1에서 100 사이의 값이 아닙니다.");
         }
-
-        System.out.println("학점:" + grade);
     }
 }
